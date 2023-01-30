@@ -68,7 +68,7 @@ The commands assume you have the certs created in the same folder where you're r
 To run the server:
 
 ```shell
-docker run --net host -v $PWD:/certs pj3677/mtlstester --run server --caCertFile certs/ca-crt.pem --serverCertFile certs/server-crt.pem --serverKeyFile certs/server-key.pem
+docker run --net host -v $PWD:/certs ghcr.io/peterj/mtlstester:latest --run server --caCertFile certs/ca-crt.pem --serverCertFile certs/server-crt.pem --serverKeyFile certs/server-key.pem
 ```
 
 The above command exposes the server on the default port (`8443`) from the host.
@@ -76,5 +76,5 @@ The above command exposes the server on the default port (`8443`) from the host.
 You can run the client like this:
 
 ```shell
-docker run --net host -v $PWD:/certs pj3677/mtlstester --run client --caCertFile certs/ca-crt.pem --clientCertFile certs/client-crt.pem --clientKeyFile certs/client-key.pem
+docker run --net host -v $PWD:/certs ghcr.io/peterj/mtlstester:latest --run client --caCertFile certs/ca-crt.pem --clientCertFile certs/client-crt.pem --clientKeyFile certs/client-key.pem
 ```
